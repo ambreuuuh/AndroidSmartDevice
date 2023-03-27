@@ -3,6 +3,8 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_SCAN" />
+    <uses-permission android:name="android.permission.BLUETOOTH_CONNECT" />
     <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
 
@@ -16,15 +18,11 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AndroidSmartDevice"
         tools:targetApi="31">
-        <activity
-            android:name=".BluetoothAdapter"
-            android:exported="false" />
+
         <activity
             android:name=".ScanAdapter"
             android:exported="false" />
-        <activity
-            android:name=".CustomAdapter"
-            android:exported="false" />
+
         <activity
             android:name=".DataActivity"
             android:exported="false" />
