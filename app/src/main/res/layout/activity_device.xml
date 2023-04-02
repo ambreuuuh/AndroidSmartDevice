@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DeviceActivity">
+
+
+    <ImageView
+        android:id="@+id/imgfond"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="-200dp"
+        android:layout_marginTop="200dp"
+        android:layout_marginEnd="180dp"
+        android:rotation="178"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/sans_titre__3_" />
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:text="BLE DETAILS"
+        android:textColor="#1D4D7A"
+        android:textSize="24dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textaffichageLED"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:text="Affichage LED:"
+        android:textColor="#1D4D7A"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/title" />
+
+    <ImageView
+        android:id="@+id/compteur1"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="48dp"
+        android:background="#001D4D7A"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/addressMAC"
+        app:srcCompat="@android:drawable/presence_online"
+        app:tint="#1D4D7A" />
+
+    <ImageView
+        android:id="@+id/compteur2"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="50dp"
+        android:background="#001D4D7A"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/nombreTextView1"
+        app:srcCompat="@android:drawable/presence_online"
+        app:tint="#1D4D7A" />
+
+    <ImageView
+        android:id="@+id/led1"
+        android:layout_width="125dp"
+        android:layout_height="125dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="40dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textaffichageLED"
+        app:srcCompat="@drawable/sans_titre__12_" />
+
+    <ImageView
+        android:id="@+id/led2"
+        android:layout_width="125dp"
+        android:layout_height="125dp"
+        app:layout_constraintBottom_toBottomOf="@+id/led1"
+        app:layout_constraintStart_toEndOf="@+id/led1"
+        app:layout_constraintTop_toTopOf="@+id/led1"
+        app:srcCompat="@drawable/sans_titre__12_" />
+
+    <ImageView
+        android:id="@+id/led3"
+        android:layout_width="125dp"
+        android:layout_height="125dp"
+        app:layout_constraintBottom_toBottomOf="@+id/led2"
+        app:layout_constraintStart_toEndOf="@+id/led2"
+        app:srcCompat="@drawable/sans_titre__12_" />
+
+    <TextView
+        android:id="@+id/Name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="TextView"
+        android:textColor="#1D4D7A"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/led2" />
+
+    <TextView
+        android:id="@+id/addressMAC"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="TextView"
+        android:textColor="#1D4D7A"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Name" />
+
+    <TextView
+        android:id="@+id/Btn1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Bouton 1"
+        android:textColor="#1D4D7A"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/compteur1"
+        app:layout_constraintStart_toStartOf="@+id/compteur1"
+        app:layout_constraintTop_toBottomOf="@+id/compteur1" />
+
+    <TextView
+        android:id="@+id/nombreTextView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:textColor="#1D4D7A"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/Btn1"
+        app:layout_constraintTop_toBottomOf="@+id/Btn1" />
+
+    <TextView
+        android:id="@+id/Btn2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Bouton 2"
+        android:textColor="#1D4D7A"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/compteur2"
+        app:layout_constraintTop_toBottomOf="@+id/compteur2" />
+
+    <TextView
+        android:id="@+id/nombretextView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:textColor="#1D4D7A"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/Btn2"
+        app:layout_constraintTop_toBottomOf="@+id/Btn2" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
